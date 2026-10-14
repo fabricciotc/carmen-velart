@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#670627">
+<title>Página no encontrada | Carmen Vélart</title>
+<meta name="description" content="La página que buscas no está disponible.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/brand/monogram.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F4EDD9;
+  --paper:#FBF8F0;
+  --pink:#F29BAC;
+  --wine:#670627;
+  --charcoal:#26252B;
+  --ochre:#CF8E32;
+  --olive:#706F52;
+  --sky:#87A5BF;
+  --navy:#0A254C;
+  --ink:#26252B;
+  --muted:#69656a;
+  --line:rgba(38,37,43,.18);
+  --white:#fffdf8;
+  --gutter:clamp(20px,4vw,64px);
+  --section-space:clamp(88px,9vw,148px);
+  --container:1380px;
+  --radius-sm:16px;
+  --radius-md:28px;
+  --radius-lg:44px;
+  --shadow:0 24px 80px rgba(38,37,43,.12);
+  --serif:"Instrument Serif", Georgia, serif;
+  --sans:"Instrument Sans", Arial, sans-serif;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body.menu-open{overflow:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+p,
+h1,
+h2,
+h3,
+blockquote{margin-top:0}
+::selection{background:var(--pink);color:var(--wine)}
+/* Typography */
+.eyebrow{display:flex;align-items:center;gap:10px;margin:0 0 20px;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--wine)}
+.eyebrow::before{content:"";width:24px;height:1px;background:currentColor;flex:0 0 24px}
+h1,
+h2,
+h3{font-family:var(--serif);font-weight:400;letter-spacing:-.025em;line-height:.94}
+h1 em,
+h2 em,
+h3 em{font-weight:400}
+h1{font-size:clamp(4rem,8vw,8.9rem)}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:13px 22px;border:1px solid var(--wine);border-radius:999px;background:var(--wine);color:#fff;font-size:.86rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease}
+.button:hover,.button:focus-visible{transform:translateY(-2px);background:var(--charcoal);border-color:var(--charcoal)}
+.button i{font-size:1.05rem}
+.text-link{display:inline-flex;align-items:center;gap:10px;border-bottom:1px solid currentColor;padding-bottom:5px;font-size:.88rem;font-weight:600;letter-spacing:.03em;transition:gap .25s ease,color .25s ease}
+.text-link:hover,.text-link:focus-visible{gap:15px;color:var(--wine)}
+/* Customization form */
+
+/* 404 */
+.not-found{position:relative;min-height:100vh;display:grid;place-items:center;overflow:hidden;background:var(--cream);padding:60px 20px}
+.not-found-pattern{position:absolute;inset:-15% -10% auto auto;width:55vw;aspect-ratio:1;background:url('assets/brand/pattern.png') center/contain no-repeat;opacity:.11}
+.not-found-inner{position:relative;max-width:900px;text-align:center}
+.not-found-inner>img{width:76px;margin:0 auto 40px}
+.not-found-inner h1{font-size:clamp(7rem,18vw,16rem);margin:0;color:var(--wine)}
+.not-found-inner p{max-width:590px;margin:0 auto 30px;color:var(--muted)}
+/* Responsive */
+@media (max-width:980px){
+  :root{--section-space:clamp(76px,10vw,108px)}
+}
+@media (max-width:760px){
+  :root{--gutter:20px;--radius-lg:32px;--radius-md:22px;--radius-sm:14px}
+  html{scroll-padding-top:90px}
+  body{font-size:15px}
+}
+@media (max-width:540px){
+  :root{--gutter:17px;--section-space:76px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,
+  *::before,
+  *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+/* About manifesto spans the full section background. */
+.not-found-inner h1{font-size:clamp(4.2rem,11vw,8.8rem);margin:0 0 24px;color:var(--wine)}
+.not-found-inner>div{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+:focus-visible{outline:2px solid var(--ochre);outline-offset:4px}
+.button:focus-visible,
+.filter-button:focus-visible,
+.icon-button:focus-visible,
+.menu-toggle:focus-visible{outline-color:var(--ochre)}
+/* ==========================================================
+   V4 - viewport-fit heroes, controlled type scale and tighter
+   alignment. These overrides intentionally live last.
+   ========================================================== */
+:root{--section-space:clamp(72px,7vw,112px);
+  --content-gap:clamp(18px,2.2vw,32px);}
+h1,
+h2,
+h3{text-wrap:balance;overflow-wrap:normal}
+h1{font-size:clamp(3.15rem,5.1vw,5.8rem);line-height:.98;letter-spacing:-.022em}
+/* Editorial sections: no staggered holes, consistent internal rhythm. */
+.not-found-inner h1{font-size:clamp(3.6rem,8vw,7rem);line-height:.95}
+/* A geometric marker replaces the font glyph in the moving manifesto. */
+@media (max-width:760px){
+  :root{--section-space:clamp(68px,12vw,88px)}
+  h1{font-size:clamp(2.8rem,10.6vw,4.2rem);line-height:1}
+}
+@media (max-width:540px){
+  h1{font-size:clamp(2.55rem,11vw,3.55rem)}
+  .not-found-inner h1{font-size:clamp(3.4rem,17vw,5.2rem)}
+}
+/* V4.4 - final restrained editorial scale on desktop */
+@media (min-width:761px){
+  h1{font-size:clamp(3rem,4.6vw,5.3rem)}
+}
+/* V5 - visual refinements */
+:root{--gutter:clamp(22px,4vw,72px);
+  --container:1400px;
+  --soft-panel:0 20px 60px rgba(38,37,43,.08);}
+html{scroll-padding-top:138px}
+/* Footer brand assets are now transparent */
+@media (max-width:980px){
+  html{scroll-padding-top:124px}
+}
+@media (max-width:760px){
+  html{scroll-padding-top:112px}
+}
+/* ==========================================================
+   V6 — Gutters, navbar única, iconografía Phosphor y cards
+   Esta capa es la autoridad final sobre los bloques que toca.
+   ========================================================== */
+:root{--gutter:clamp(24px,4.6vw,80px);
+  --container:1360px;
+  --ring:rgba(103,6,39,.10);
+  --ring-strong:rgba(103,6,39,.20);
+  --ring-light:rgba(244,237,217,.16);
+  --surface:linear-gradient(180deg,rgba(255,253,248,.96),rgba(251,248,240,.9));
+  --surface-dark:linear-gradient(180deg,rgba(244,237,217,.075),rgba(244,237,217,.028));
+  --elev-1:0 1px 2px rgba(38,37,43,.04),0 10px 26px -16px rgba(38,37,43,.35);
+  --elev-2:0 2px 6px rgba(38,37,43,.05),0 28px 56px -26px rgba(38,37,43,.45);
+  --elev-3:0 34px 70px -34px rgba(103,6,39,.5);
+  --ease:cubic-bezier(.22,.61,.36,1);}
+/* ----------------------------------------------------------
+   2. Iconografía Phosphor
+   Los iconos duotone dibujan dos capas con ::before/::after,
+   así que las cápsulas usan inline-block + line-height
+   (nunca flex/grid, que separaría las dos capas).
+   ---------------------------------------------------------- */
+[class*="ph-"]{vertical-align:-.055em}
+/* ----------------------------------------------------------
+   12. Responsive
+   ---------------------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+}
+/* 404: el tejido se funde con el fondo en vez de cortarse en seco. */
+.not-found-pattern{inset:-12% -14% auto auto;
+  width:min(640px,52vw);
+  opacity:.5;
+  -webkit-mask-image:radial-gradient(120% 100% at 100% 0,#000 20%,transparent 78%);
+  mask-image:radial-gradient(120% 100% at 100% 0,#000 20%,transparent 78%);}
+.not-found-inner>img{width:64px}
+@media (max-width:760px){
+  .not-found-pattern{width:82vw;opacity:.4}
+}
+
+/* Phosphor Icons (MIT) - subconjunto local usado por esta página. */
+@font-face{font-family:"Phosphor-Bold";src:url("assets/fonts/phosphor-bold.woff2") format("woff2");font-weight:normal;font-style:normal;font-display:block}
+[class*="ph-"]{display:inline-block;line-height:1;font-style:normal;font-variant:normal;font-weight:normal;text-transform:none;speak:never;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.ph-bold{font-family:"Phosphor-Bold"!important}
+.ph-bold.ph-arrow-right:before{content:"\e06c"}
+.ph-bold.ph-arrow-up-right:before{content:"\e092"}
+
+/* ==========================================================
+   V8 · Capa de refinamiento visual y responsive
+   (va al final del <style> de cada página: gana a lo anterior)
+   ========================================================== */
+h1,h2,h3,blockquote{text-wrap:balance}
+p,li,figcaption{text-wrap:pretty}
+::selection{background:var(--wine);color:var(--cream)}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+
+/* Títulos de portada: medida editorial (3 líneas, no 5) */
+.hero-copy h1,
+.page-hero-copy h1,.contact-copy h1,.about-title h1,.faq-hero h1{max-width:12.5ch!important;font-size:clamp(3rem,5.25vw,5.7rem)!important;line-height:.95!important;letter-spacing:-.03em}
+.page-hero-copy h1{max-width:13ch!important}
+.about-title h1,.faq-hero h1,.page-hero-personalize .page-hero-copy h1{max-width:16ch!important}
+.page-hero-copy>p:last-child,.page-hero-copy .lede{max-width:46ch}
+@media (min-width:981px){.page-hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr)}}
+.page-hero-image{box-shadow:0 34px 80px -34px rgba(38,37,43,.45)}
+.page-hero-image img{transition:transform 1.2s var(--ease,ease)}
+.page-hero-image:hover img{transform:scale(1.025)}
+
+/* Navegación con seis secciones */
+.desktop-nav a{padding:11px 15px}
+.desktop-nav a[href="tienda.html"]::before,
+.desktop-nav a[href="libros.html"]::before{content:none}
+@media (max-width:1320px){
+  .desktop-nav a{padding:10px 12px;font-size:.72rem;letter-spacing:.035em}
+  .header-cta{padding:11px 14px;font-size:.72rem}
+}
+.mobile-panel{max-height:calc(100svh - 110px);overflow-y:auto;overscroll-behavior:contain}
+@media (min-width:761px) and (max-width:980px){
+  .mobile-panel-inner{grid-template-columns:1.2fr .8fr;gap:18px;align-items:start}
+}
+
+/* Tarjetas: elevación más suave y consistente */
+.collection-image img,.story-card img{will-change:transform}
+.collection-card{transition:transform .5s var(--ease,ease),box-shadow .5s var(--ease,ease)}
+@media (hover:hover){
+  .collection-card:hover{transform:translateY(-4px)}
+}
+
+/* Footer: columna de enlaces con 6 entradas en dos columnas */
+.footer-column h2{margin-bottom:14px}
+.footer-column a{white-space:nowrap}
+@media (min-width:761px){
+  .footer-column:nth-of-type(2){display:grid;grid-auto-flow:column;grid-template-rows:auto repeat(3,auto);grid-template-columns:repeat(2,max-content);column-gap:44px;align-content:start}
+  .footer-column:nth-of-type(2) h2{grid-row:1;grid-column:1/-1}
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width:980px){
+  .page-hero-copy h1,.hero-copy h1,.contact-copy h1,.about-title h1,.faq-hero h1{max-width:14ch!important}
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width:760px){
+  .hero-copy h1,
+  .page-hero-copy h1,.contact-copy h1,.about-title h1,.faq-hero h1{font-size:clamp(2.7rem,11.4vw,3.7rem)!important;max-width:none!important}
+  .section-heading h2,.detail-intro h2,.collection-cta h2{font-size:clamp(2.3rem,9.6vw,3.2rem)}
+  /* Sellos del hero: una sola fila deslizable en lugar de una píldora huérfana */
+  .hero-meta{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent);padding-right:24px}
+  .hero-meta::-webkit-scrollbar{display:none}
+  .hero-meta span{flex:0 0 auto}
+  /* «Más historias»: el texto ya no se monta sobre el tejido */
+  .story-card-color{min-height:340px!important}
+  .story-card-color .story-pattern{width:30%!important;-webkit-mask-image:linear-gradient(90deg,transparent,#000 35%);mask-image:linear-gradient(90deg,transparent,#000 35%)}
+  .story-card-color>div{max-width:64%!important}
+  .story-card-color h3{font-size:clamp(2rem,8.6vw,2.6rem)!important}
+  .footer-column a{padding-block:3px}
+}
+/* Home: títulos de portada un punto más grandes, hay aire de sobra */
+@media (min-width:981px){
+  .hero-copy h1{font-size:clamp(3.4rem,6.1vw,6.8rem)!important}
+}
+@media (max-width:420px){
+  .button{min-height:50px;padding:12px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  .page-hero-image:hover img,.collection-card:hover{transform:none}
+}
+</style>
+</head>
+<body><main id="contenido" class="not-found"><div class="not-found-pattern" aria-hidden="true"></div><div class="not-found-inner"><img src="assets/brand/monogram.png" alt="" aria-hidden="true"><p class="eyebrow">Error 404</p><h1>Esta página<br><em>se salió del lienzo.</em></h1><p>Vuelve al inicio o explora las piezas de inspiración.</p><div><a class="button" href="index.html">Volver al inicio <i class="ph-bold ph-arrow-up-right"></i></a><a class="text-link" href="coleccion.html">Ver colección <i class="ph-bold ph-arrow-right"></i></a></div></div></main></body></html>

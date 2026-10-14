@@ -1,0 +1,1393 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#670627">
+<title>Personaliza tu prenda | Carmen Vélart</title>
+<meta name="description" content="Cuéntanos tu idea, elige la prenda y prepara una solicitud de personalización para Carmen Vélart.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/brand/monogram.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F4EDD9;
+  --paper:#FBF8F0;
+  --pink:#F29BAC;
+  --wine:#670627;
+  --charcoal:#26252B;
+  --ochre:#CF8E32;
+  --olive:#706F52;
+  --sky:#87A5BF;
+  --navy:#0A254C;
+  --ink:#26252B;
+  --muted:#69656a;
+  --line:rgba(38,37,43,.18);
+  --white:#fffdf8;
+  --gutter:clamp(20px,4vw,64px);
+  --section-space:clamp(88px,9vw,148px);
+  --container:1380px;
+  --radius-sm:16px;
+  --radius-md:28px;
+  --radius-lg:44px;
+  --shadow:0 24px 80px rgba(38,37,43,.12);
+  --serif:"Instrument Serif", Georgia, serif;
+  --sans:"Instrument Sans", Arial, sans-serif;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body.menu-open{overflow:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button,
+input,
+textarea,
+select{font:inherit}
+button{color:inherit}
+figure{margin:0}
+p,
+h1,
+h2,
+h3,
+blockquote{margin-top:0}
+::selection{background:var(--pink);color:var(--wine)}
+.container{width:min(calc(100% - (var(--gutter) * 2)),var(--container));margin-inline:auto}
+.section{padding-block:var(--section-space)}
+.bg-pink{background:var(--pink)}
+.skip-link{position:fixed;z-index:9999;top:10px;left:12px;padding:10px 14px;background:var(--charcoal);color:#fff;border-radius:999px;transform:translateY(-160%);transition:transform .2s ease}
+.skip-link:focus{transform:translateY(0)}
+/* Typography */
+.eyebrow{display:flex;align-items:center;gap:10px;margin:0 0 20px;font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--wine)}
+.eyebrow::before{content:"";width:24px;height:1px;background:currentColor;flex:0 0 24px}
+h1,
+h2,
+h3{font-family:var(--serif);font-weight:400;letter-spacing:-.025em;line-height:.94}
+h1 em,
+h2 em,
+h3 em{font-weight:400}
+h1{font-size:clamp(4rem,8vw,8.9rem)}
+h2{font-size:clamp(3.1rem,5.8vw,6.8rem)}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:13px 22px;border:1px solid var(--wine);border-radius:999px;background:var(--wine);color:#fff;font-size:.86rem;font-weight:600;letter-spacing:.02em;cursor:pointer;transition:transform .25s ease,background .25s ease,color .25s ease,border-color .25s ease}
+.button:hover,.button:focus-visible{transform:translateY(-2px);background:var(--charcoal);border-color:var(--charcoal)}
+.button i{font-size:1.05rem}
+.button-outline{background:transparent;color:var(--wine);border-color:rgba(103,6,39,.35)}
+.button-outline:hover,.button-outline:focus-visible{background:var(--wine);border-color:var(--wine);color:#fff}
+/* Entrance */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);transition-delay:var(--delay,0ms)}
+.reveal.is-visible{opacity:1;transform:none}
+/* Header */
+.announcement{height:34px;background:var(--wine);color:var(--cream);display:flex;align-items:center;justify-content:center;gap:16px;padding-inline:20px;font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;overflow:hidden}
+.announcement i{width:4px;height:4px;border-radius:50%;background:var(--ochre)}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(244,237,217,.94);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:box-shadow .25s ease,border-color .25s ease,background .25s ease}
+.site-header.is-scrolled{box-shadow:0 10px 30px rgba(38,37,43,.07);border-color:rgba(38,37,43,.08);background:rgba(244,237,217,.98)}
+.header-inner{height:82px;display:grid;grid-template-columns:minmax(190px,1fr) auto minmax(190px,1fr);align-items:center;gap:28px}
+.brand{display:inline-flex;align-items:center;justify-self:start}
+.brand img{width:clamp(150px,13vw,205px);height:auto}
+.desktop-nav{display:flex;align-items:center;justify-content:center;gap:clamp(22px,2.8vw,42px)}
+.desktop-nav a{position:relative;font-size:.78rem;font-weight:600;letter-spacing:.055em}
+.desktop-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:1px;background:var(--wine);transition:right .25s ease}
+.desktop-nav a:hover::after,.desktop-nav a:focus-visible::after{right:0}
+.header-cta{justify-self:end;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid rgba(103,6,39,.35);border-radius:999px;color:var(--wine);font-size:.76rem;font-weight:600;transition:background .25s ease,color .25s ease}
+.header-cta:hover,.header-cta:focus-visible{background:var(--wine);color:#fff}
+.menu-toggle{display:none;border:0;background:transparent;font-size:1.55rem;padding:8px;cursor:pointer;justify-self:end}
+.mobile-panel{position:absolute;inset:82px 0 auto;background:var(--cream);border-top:1px solid var(--line);box-shadow:0 30px 70px rgba(38,37,43,.14)}
+.mobile-panel[hidden]{display:none}
+.mobile-panel-inner{display:grid;grid-template-columns:1fr .8fr;gap:50px;padding-block:36px 54px}
+.mobile-panel nav{display:grid}
+.mobile-panel nav a{padding:15px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:2.3rem;line-height:1}
+.mobile-note{align-self:end;padding:28px;background:var(--wine);color:var(--cream);border-radius:var(--radius-md)}
+.mobile-note .eyebrow{color:var(--pink)}
+.mobile-note p{margin:0;font-family:var(--serif);font-size:2rem;line-height:1.02}
+/* Page heroes */
+.page-hero{position:relative;overflow:hidden;padding:clamp(74px,8vw,125px) 0;background:var(--cream)}
+.page-hero-grid{display:grid;grid-template-columns:minmax(0,.88fr) minmax(450px,1.12fr);gap:clamp(48px,8vw,130px);align-items:center}
+.page-hero-copy h1{margin:0 0 26px;color:var(--wine)}
+.page-hero-copy h1 em{color:var(--charcoal)}
+.page-hero-copy>p:last-child,.page-hero-copy .lede{max-width:650px;color:var(--muted);font-size:1.08rem;line-height:1.7}
+.page-hero-image{position:relative;height:clamp(540px,58vw,740px);overflow:hidden;border-radius:var(--radius-lg)}
+.page-hero-image img{width:100%;height:100%;object-fit:cover}
+.page-hero-collection .page-hero-image::before,.page-hero-personalize .page-hero-image::before{content:"";position:absolute;z-index:1;inset:auto 0 0 auto;width:34%;height:34%;background:var(--pink) url('assets/brand/pattern.png') center/cover no-repeat;mix-blend-mode:multiply;opacity:.92}
+.page-hero-personalize{background:var(--pink)}
+/* Customization form */
+.custom-form-section{background:var(--paper)}
+.custom-layout{display:grid;grid-template-columns:minmax(290px,.55fr) minmax(0,1.1fr);gap:clamp(50px,8vw,130px);align-items:start}
+.custom-aside{position:sticky;top:130px}
+.custom-aside h2{font-size:clamp(3rem,4.6vw,5rem);margin:0 0 24px;color:var(--wine)}
+.form-progress{display:grid;gap:0;margin:34px 0;border-top:1px solid var(--line)}
+.form-progress span{padding:14px 0;border-bottom:1px solid var(--line);font-size:.72rem;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:10px}
+.form-progress span::before{content:"";width:7px;height:7px;border-radius:50%;background:rgba(38,37,43,.2)}
+.form-progress span.is-active{color:var(--wine)}
+.form-progress span.is-active::before{background:var(--wine)}
+.aside-art{position:relative;height:300px;overflow:hidden;border-radius:var(--radius-md);margin-top:34px}
+.aside-art img{width:100%;height:100%;object-fit:cover}
+.custom-form{border-radius:var(--radius-lg);background:var(--cream);padding:clamp(30px,5vw,70px);box-shadow:0 20px 70px rgba(38,37,43,.07)}
+.form-step{display:none}
+.form-step.is-active{display:block;animation:formIn .35s ease both}
+@keyframes formIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.step-label{margin-bottom:36px}
+.field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.field{display:grid;gap:8px}
+.field-full{grid-column:1/-1}
+.field input,
+.field textarea,
+.field select{width:100%;border:0;border-bottom:1px solid rgba(38,37,43,.35);background:transparent;border-radius:0;padding:12px 2px 13px;outline:none;color:var(--charcoal);transition:border-color .2s ease}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,
+.field textarea:focus,
+.field select:focus{border-color:var(--wine)}
+.field input[type=file]{padding-block:14px}
+.field small{color:var(--muted);font-size:.7rem}
+.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.choice{position:relative;display:flex;align-items:center;gap:10px;min-height:58px;padding:13px 15px;border:1px solid var(--line);border-radius:16px;cursor:pointer;background:rgba(255,255,255,.3);font-size:.82rem;font-weight:600}
+.choice input{accent-color:var(--wine)}
+.form-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:42px;padding-top:28px;border-top:1px solid var(--line)}
+.check-line,.check-light{display:flex;align-items:flex-start;gap:10px;font-size:.76rem;line-height:1.5;color:var(--muted)}
+.check-line input,.check-light input{margin-top:3px;accent-color:var(--wine)}
+.mini-process{margin-top:34px}
+.mini-process-list{display:grid;gap:8px}
+.mini-process-list span{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.8rem}
+/* Footer */
+.site-footer{position:relative;overflow:hidden;background:var(--wine);color:var(--cream);padding:clamp(70px,7vw,110px) 0 28px}
+.footer-pattern{position:absolute;right:-6%;top:-28%;width:min(620px,46vw);aspect-ratio:1;background:url('assets/brand/pattern.png') center/contain no-repeat;opacity:.11;pointer-events:none}
+.footer-grid{position:relative;display:grid;grid-template-columns:1.5fr .55fr .55fr;gap:clamp(40px,7vw,110px);padding-bottom:70px}
+.footer-brand img{width:min(270px,70%);filter:brightness(0) invert(1);margin-bottom:24px}
+.footer-brand p{max-width:430px;margin:0;color:rgba(244,237,217,.65);font-size:.92rem}
+.footer-column{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.footer-column h2{font-family:var(--sans);font-size:.7rem;line-height:1.3;letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:var(--pink);margin:0 0 12px}
+.footer-column a{font-family:var(--serif);font-size:1.3rem;line-height:1.2;color:var(--cream);transition:opacity .2s ease,transform .2s ease}
+.footer-column a:hover{opacity:.7;transform:translateX(3px)}
+.footer-bottom{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding-top:24px;border-top:1px solid rgba(244,237,217,.2);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(244,237,217,.62)}
+.footer-bottom p{margin:0}
+.footer-bottom p:nth-child(2){justify-self:center}
+.footer-bottom a{justify-self:end;display:inline-flex;align-items:center;gap:6px}
+/* Dialog */
+.summary-dialog{width:min(760px,calc(100% - 30px));max-height:min(88vh,900px);overflow:auto;border:0;border-radius:var(--radius-lg);padding:clamp(28px,5vw,58px);background:var(--cream);color:var(--charcoal);box-shadow:0 30px 100px rgba(0,0,0,.32)}
+.summary-dialog::backdrop{background:rgba(10,37,76,.62);backdrop-filter:blur(5px)}
+.dialog-head{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.dialog-head .eyebrow{margin:0}
+.icon-button{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:transparent;cursor:pointer;font-size:1.15rem}
+.summary-dialog h2{font-size:clamp(3rem,5.6vw,5.6rem);margin:32px 0 20px;color:var(--wine)}
+.dialog-copy{color:var(--muted);max-width:600px}
+.summary-dialog pre{white-space:pre-wrap;word-break:break-word;padding:18px;margin:24px 0;border-radius:18px;background:rgba(255,255,255,.58);border:1px solid var(--line);font-family:var(--sans);font-size:.82rem;line-height:1.65}
+.dialog-actions{display:flex;flex-wrap:wrap;gap:10px}
+.form-status{margin:14px 0 0;min-height:1.4em;color:var(--wine);font-size:.75rem;font-weight:600}
+/* Responsive */
+@media (max-width:1180px){
+  .desktop-nav{gap:20px}
+  .page-hero-grid,.about-hero-grid{gap:60px}
+  .custom-layout{grid-template-columns:300px 1fr;gap:55px}
+}
+@media (max-width:980px){
+  :root{--section-space:clamp(76px,10vw,108px)}
+  .header-inner{grid-template-columns:1fr auto;height:74px}
+  .desktop-nav,.header-cta{display:none}
+  .menu-toggle{display:block}
+  .mobile-panel{inset:74px 0 auto}
+  .hero-grid,
+  .page-hero-grid,
+  .about-hero-grid,
+  .contact-grid{grid-template-columns:1fr}
+  .page-hero-image{height:680px;max-width:760px}
+  .custom-layout{grid-template-columns:1fr}
+  .custom-aside{position:static;display:grid;grid-template-columns:1fr .8fr;gap:30px;align-items:end}
+  .custom-aside .aside-art{grid-column:2;grid-row:1/4;margin:0}
+  .form-progress,.mini-process{max-width:450px}
+  .footer-grid{grid-template-columns:1.2fr .6fr .6fr;gap:45px}
+}
+@media (max-width:760px){
+  :root{--gutter:20px;--radius-lg:32px;--radius-md:22px;--radius-sm:14px}
+  html{scroll-padding-top:90px}
+  body{font-size:15px}
+  .announcement{height:30px;gap:10px;font-size:.58rem;letter-spacing:.1em}
+  .header-inner{height:68px}
+  .brand img{width:154px}
+  .mobile-panel{inset:68px 0 auto}
+  .mobile-panel-inner{grid-template-columns:1fr;gap:28px;padding-block:24px 34px}
+  .mobile-panel nav a{font-size:2rem}
+  .mobile-note{display:none}
+  .page-hero{padding-block:70px}
+  .page-hero-image{height:600px}
+  .custom-aside{display:block}
+  .custom-aside .aside-art{height:360px;margin-top:26px}
+  .custom-form{padding:30px 22px}
+  .field-grid,.choice-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:46px 30px}
+  .footer-brand{grid-column:1/-1}
+  .footer-bottom{grid-template-columns:1fr auto;row-gap:14px}
+  .footer-bottom p:nth-child(2){display:none}
+  .footer-bottom a{justify-self:end}
+}
+@media (max-width:540px){
+  :root{--gutter:17px;--section-space:76px}
+  h2{font-size:clamp(2.9rem,14vw,4.4rem)}
+  .announcement span:last-child{display:none}
+  .announcement i{display:none}
+  .page-hero-image{height:520px}
+  .form-nav{align-items:stretch;flex-direction:column-reverse}
+  .form-nav .button{width:100%}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-brand{grid-column:auto}
+  .footer-column{padding-top:10px;border-top:1px solid rgba(244,237,217,.15)}
+  .footer-bottom{grid-template-columns:1fr;align-items:start}
+  .footer-bottom a{justify-self:start}
+  .summary-dialog{padding:28px 20px}
+  .dialog-actions{flex-direction:column}
+  .dialog-actions .button{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,
+  *::before,
+  *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+}
+/* Structural refinements for the final markup */
+.page-hero-image figcaption,.contact-image figcaption{position:absolute;left:16px;bottom:16px;z-index:2;max-width:calc(100% - 32px);padding:9px 12px;border-radius:999px;background:rgba(244,237,217,.92);color:var(--wine);font-size:.67rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;backdrop-filter:blur(8px)}
+.page-hero-image,.contact-image{position:relative}
+.form-progress{list-style:none;padding:0;margin:34px 0;border-top:1px solid var(--line)}
+.form-progress>li{display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.form-progress>li>span{font-size:.68rem;font-weight:600;color:inherit}
+.form-progress>li>div{font-size:.79rem;font-weight:600;color:inherit}
+.form-progress>li small{display:block;margin-top:2px;font-size:.67rem;font-weight:400;color:var(--muted)}
+.form-progress>li.is-active,.form-progress>li.is-active>span{color:var(--wine)}
+.step-label{display:inline-block;margin-bottom:12px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--wine)}
+.form-step>h2{font-size:clamp(3rem,4.7vw,5rem);margin:0 0 12px;color:var(--charcoal)}
+.form-step>p{margin:0 0 36px;color:var(--muted)}
+.mini-process{display:grid;grid-template-columns:1fr .8fr;gap:clamp(50px,9vw,140px);align-items:end;margin-top:0}
+.mini-process h2{margin:0;color:var(--wine)}
+.mini-process-list{display:grid;gap:0;border-top:1px solid rgba(103,6,39,.28)}
+.mini-process-list>div{display:grid;grid-template-columns:45px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid rgba(103,6,39,.28);align-items:start}
+.mini-process-list>div>span{font-size:.67rem;font-weight:600;color:var(--wine)}
+.mini-process-list p{margin:0;color:rgba(38,37,43,.72);font-size:.9rem}
+/* About manifesto spans the full section background. */
+@media (max-width:980px){
+  .mini-process{grid-template-columns:1fr;gap:40px}
+}
+.desktop-nav a[aria-current="page"]::after{right:0}
+.mobile-panel nav a[aria-current="page"]{color:var(--wine)}
+:focus-visible{outline:2px solid var(--ochre);outline-offset:4px}
+.button:focus-visible,
+.filter-button:focus-visible,
+.icon-button:focus-visible,
+.menu-toggle:focus-visible{outline-color:var(--ochre)}
+/* ==========================================================
+   V4 - viewport-fit heroes, controlled type scale and tighter
+   alignment. These overrides intentionally live last.
+   ========================================================== */
+:root{--section-space:clamp(72px,7vw,112px);
+  --content-gap:clamp(18px,2.2vw,32px);}
+h1,
+h2,
+h3{text-wrap:balance;overflow-wrap:normal}
+h1{font-size:clamp(3.15rem,5.1vw,5.8rem);line-height:.98;letter-spacing:-.022em}
+h2{font-size:clamp(2.35rem,3.75vw,4.25rem);line-height:1;letter-spacing:-.02em}
+/* Viewport-aware heroes: content stays centered and generally fits above the fold. */
+.hero-editorial,
+.page-hero,
+.about-hero,
+.contact-hero,
+.faq-hero{min-height:calc(100svh - 116px);
+  display:flex;
+  align-items:center;
+  padding-block:clamp(28px,4.2vh,54px);}
+/* (sustituido en la capa V6: el contenedor vuelve a respetar el gutter) */
+.hero-grid,
+.page-hero-grid,
+.about-hero-grid,
+.contact-grid,
+.faq-hero-grid{gap:clamp(34px,5vw,76px)}
+.page-hero{padding-block:clamp(28px,4.2vh,54px)}
+.page-hero-copy h1{margin-bottom:20px;max-width:760px}
+.page-hero-copy>p:last-child,.page-hero-copy .lede{font-size:1rem;line-height:1.62;max-width:620px}
+.page-hero-image{height:clamp(400px,58vh,600px)}
+/* Editorial sections: no staggered holes, consistent internal rhythm. */
+.summary-dialog h2{font-size:clamp(2.5rem,4.2vw,4.35rem);margin:26px 0 18px}
+/* Personalization form: denser, aligned and visually complete. */
+.custom-layout{gap:clamp(34px,5.2vw,72px);align-items:start}
+.custom-aside{padding:clamp(24px,2.7vw,34px);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  background:var(--cream);
+  box-shadow:0 14px 44px rgba(38,37,43,.055);}
+.custom-aside h2{font-size:clamp(2.35rem,3.3vw,3.55rem);margin-bottom:18px}
+.form-progress{margin:26px 0}
+.form-progress>li{padding:12px 0}
+.aside-art{height:clamp(230px,25vw,315px);margin-top:26px}
+.custom-form{padding:clamp(28px,3.4vw,48px)}
+.form-step>h2{font-size:clamp(2.15rem,3.15vw,3.45rem);line-height:1.02;margin-bottom:10px}
+.form-step>p{margin-bottom:28px}
+.field-grid{gap:20px 18px}
+.choice-grid{gap:14px}
+.form-nav{margin-top:28px;padding-top:22px}
+/* A geometric marker replaces the font glyph in the moving manifesto. */
+@media (max-width:980px){
+  .hero-editorial,
+  .page-hero,
+  .about-hero,
+  .contact-hero,
+  .faq-hero{min-height:calc(100svh - 108px);
+      padding-block:34px;}
+  .hero-grid,
+  .page-hero-grid,
+  .about-hero-grid,
+  .contact-grid,
+  .faq-hero-grid{gap:34px}
+  .page-hero-image{height:clamp(350px,49vh,500px);max-width:690px}
+  .custom-aside{position:static;display:grid;grid-template-columns:1fr .78fr;gap:24px;align-items:center}
+  .custom-aside .aside-art{grid-column:2;grid-row:1/4;margin:0;height:100%;min-height:260px}
+}
+@media (max-width:760px){
+  :root{--section-space:clamp(68px,12vw,88px)}
+  h1{font-size:clamp(2.8rem,10.6vw,4.2rem);line-height:1}
+  h2{font-size:clamp(2.12rem,8.2vw,3.15rem);line-height:1.02}
+  .hero-editorial,
+  .page-hero,
+  .about-hero,
+  .contact-hero,
+  .faq-hero{min-height:calc(100svh - 98px);
+      padding-block:28px;}
+  .hero-grid,
+  .page-hero-grid,
+  .about-hero-grid,
+  .contact-grid,
+  .faq-hero-grid{gap:28px}
+  .page-hero{padding-block:28px}
+  .page-hero-copy h1{margin-bottom:16px}
+  .page-hero-image,.contact-image{height:clamp(270px,37vh,340px)}
+  .custom-aside{display:block;padding:24px}
+  .custom-aside .aside-art{height:280px;min-height:0;margin-top:22px}
+  .custom-form{padding:26px 20px}
+  .form-step>h2{font-size:clamp(2rem,8vw,2.85rem)}
+}
+@media (max-width:540px){
+  h1{font-size:clamp(2.55rem,11vw,3.55rem)}
+  h2{font-size:clamp(2rem,9vw,2.8rem)}
+  .hero-editorial,
+  .page-hero,
+  .about-hero,
+  .contact-hero,
+  .faq-hero{padding-block:24px}
+  .page-hero-image,.contact-image{height:clamp(245px,34vh,310px)}
+  .summary-dialog h2{font-size:clamp(2.2rem,9vw,3rem)}
+}
+/* V4.1 - QA corrections */
+[hidden]{display:none!important}
+@media (max-width:760px){
+  h2{font-size:clamp(1.82rem,7vw,2.55rem);line-height:1.05}
+}
+@media (max-width:540px){
+  h2{font-size:clamp(1.78rem,7.2vw,2.35rem)}
+}
+/* V4.2 - final headline balance */
+.page-hero-personalize .page-hero-copy h1{font-size:clamp(2.85rem,3.75vw,4.25rem);line-height:1}
+@media (max-width:760px){
+  .page-hero-personalize .page-hero-copy h1{font-size:clamp(2.45rem,9.2vw,3.45rem)}
+}
+/* V4.4 - final restrained editorial scale on desktop */
+@media (min-width:761px){
+  h1{font-size:clamp(3rem,4.6vw,5.3rem)}
+  h2{font-size:clamp(2.25rem,3.35vw,3.9rem)}
+  .page-hero-personalize .page-hero-copy h1{font-size:clamp(2.8rem,3.55vw,4.1rem)}
+}
+/* V5 - visual refinements */
+:root{--gutter:clamp(22px,4vw,72px);
+  --container:1400px;
+  --soft-panel:0 20px 60px rgba(38,37,43,.08);}
+html{scroll-padding-top:138px}
+/* Unique floating navbar */
+.site-header{top:0;
+  padding:12px 0 14px;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  backdrop-filter:none;}
+.site-header.is-scrolled{background:transparent;border:0;box-shadow:none}
+.header-inner{height:auto;
+  min-height:86px;
+  grid-template-columns:minmax(180px,1fr) auto auto;
+  gap:18px;
+  padding:14px clamp(18px,2.2vw,28px);
+  background:rgba(251,248,240,.93);
+  border:1px solid rgba(103,6,39,.12);
+  border-radius:32px;
+  box-shadow:0 18px 52px rgba(38,37,43,.08);}
+.site-header.is-scrolled .header-inner{background:rgba(251,248,240,.97);
+  box-shadow:0 22px 60px rgba(38,37,43,.12);}
+.brand img{width:clamp(148px,12vw,210px)}
+.desktop-nav{gap:8px;
+  padding:8px;
+  border:1px solid rgba(103,6,39,.11);
+  border-radius:999px;
+  background:rgba(103,6,39,.035);}
+.desktop-nav a{padding:11px 18px;
+  border-radius:999px;
+  font-size:.76rem;
+  font-weight:600;
+  letter-spacing:.05em;
+  transition:background .24s ease,color .24s ease,transform .24s ease;}
+.desktop-nav a::after{display:none}
+.desktop-nav a:hover,
+.desktop-nav a:focus-visible,
+.desktop-nav a[aria-current="page"]{background:var(--wine);
+  color:var(--cream);
+  transform:translateY(-1px);}
+.header-cta{min-height:48px;
+  padding:12px 18px;
+  border-color:rgba(103,6,39,.2);
+  background:linear-gradient(135deg,rgba(103,6,39,.08),rgba(242,155,172,.18));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28);}
+.header-cta:hover,.header-cta:focus-visible{background:var(--wine);color:#fff}
+.menu-toggle{width:48px;
+  height:48px;
+  border:1px solid rgba(103,6,39,.18);
+  border-radius:50%;
+  background:rgba(103,6,39,.035);
+  display:none;
+  place-items:center;}
+.mobile-panel{top:100%;
+  padding-top:10px;
+  background:transparent;
+  border:0;
+  box-shadow:none;}
+.mobile-panel-inner{grid-template-columns:1fr;gap:18px;padding:0}
+.mobile-panel nav,.mobile-note{border:1px solid rgba(103,6,39,.12);
+  border-radius:28px;
+  box-shadow:var(--soft-panel);}
+.mobile-panel nav{padding:12px 22px;
+  background:rgba(251,248,240,.97);}
+.mobile-panel nav a{padding:15px 0;
+  font-size:1.72rem;
+  line-height:1.02;}
+.mobile-note{padding:26px;
+  background:var(--wine);
+  color:var(--cream);}
+/* Hero breathing room and title scale */
+.hero-editorial,
+.page-hero,
+.about-hero,
+.contact-hero,
+.faq-hero{min-height:calc(100svh - 142px);
+  padding-block:clamp(42px,5.6vw,86px);}
+.hero-grid,
+.page-hero-grid,
+.about-hero-grid,
+.contact-grid,
+.faq-hero-grid{padding-inline:clamp(4px,1vw,14px);
+  gap:clamp(30px,5vw,78px);
+  align-items:center;}
+.page-hero-grid{grid-template-columns:minmax(0,.84fr) minmax(420px,1.16fr)}
+.hero-copy,
+.page-hero-copy,
+.about-title,
+.contact-copy,
+.faq-hero-grid>div:first-child{max-width:640px}
+.hero-copy h1,
+.page-hero-copy h1,
+.about-title h1,
+.contact-copy h1,
+.faq-hero h1{font-size:clamp(2.8rem,4.8vw,5.35rem);
+  line-height:.96;
+  text-wrap:balance;}
+.page-hero-copy h1,
+.about-title h1,
+.contact-copy h1,
+.faq-hero h1{max-width:11ch}
+.page-hero-copy h1,
+.about-title h1,
+.contact-copy h1,
+.faq-hero h1{margin-bottom:20px}
+.hero-lede,
+.page-hero-copy>p:last-child,
+.page-hero-copy .lede,
+.about-title>p:last-child,
+.contact-copy>p,
+.faq-hero-grid>div:last-child p{font-size:1.02rem;line-height:1.68}
+.hero-canvas,
+.page-hero-image,
+.about-image-stack,
+.contact-image,
+.faq-hero figure{width:100%;justify-self:end}
+.page-hero-image,
+.contact-image,
+.faq-hero figure,
+.about-image-stack figure,
+.hero-main-image,
+.hero-small-image{box-shadow:var(--soft-panel)}
+/* Footer brand assets are now transparent */
+.footer-brand img,.closing-copy>img{background:transparent}
+@media (max-width:980px){
+  html{scroll-padding-top:124px}
+  .hero-editorial,
+  .page-hero,
+  .about-hero,
+  .contact-hero,
+  .faq-hero{min-height:calc(100svh - 124px)}
+  .header-inner{grid-template-columns:minmax(0,1fr) auto;gap:14px;padding:12px 16px;min-height:76px}
+  .desktop-nav,.header-cta{display:none}
+  .menu-toggle{display:grid}
+  .mobile-panel nav a{font-size:1.55rem}
+  .hero-grid,
+  .page-hero-grid,
+  .about-hero-grid,
+  .contact-grid,
+  .faq-hero-grid{grid-template-columns:1fr;gap:28px;align-items:start}
+  .hero-copy,
+  .page-hero-copy,
+  .about-title,
+  .contact-copy,
+  .faq-hero-grid>div:first-child{max-width:none}
+  .hero-copy h1,
+  .page-hero-copy h1,
+  .about-title h1,
+  .contact-copy h1,
+  .faq-hero h1{max-width:12ch}
+  .hero-canvas,
+  .page-hero-image,
+  .about-image-stack,
+  .contact-image,
+  .faq-hero figure{max-width:740px}
+}
+@media (max-width:760px){
+  html{scroll-padding-top:112px}
+  .announcement{height:32px;gap:12px;font-size:.6rem;letter-spacing:.12em}
+  .site-header{padding:10px 0 12px}
+  .header-inner{border-radius:24px}
+  .brand img{width:155px}
+  .hero-editorial,
+  .page-hero,
+  .about-hero,
+  .contact-hero,
+  .faq-hero{min-height:calc(100svh - 112px);padding-block:24px}
+  .hero-copy h1,
+  .page-hero-copy h1,
+  .about-title h1,
+  .contact-copy h1,
+  .faq-hero h1{font-size:clamp(2.4rem,10.2vw,3.9rem);max-width:100%}
+  .hero-lede,
+  .page-hero-copy>p:last-child,
+  .page-hero-copy .lede,
+  .about-title>p:last-child,
+  .contact-copy>p,
+  .faq-hero-grid>div:last-child p{font-size:.98rem;line-height:1.6}
+}
+@media (max-width:540px){
+  .announcement{justify-content:flex-start;overflow:auto;padding-inline:14px}
+  .mobile-panel nav{padding:10px 18px}
+  .mobile-note p{font-size:1.65rem}
+}
+/* ==========================================================
+   V6 — Gutters, navbar única, iconografía Phosphor y cards
+   Esta capa es la autoridad final sobre los bloques que toca.
+   ========================================================== */
+:root{--gutter:clamp(24px,4.6vw,80px);
+  --container:1360px;
+  --ring:rgba(103,6,39,.10);
+  --ring-strong:rgba(103,6,39,.20);
+  --ring-light:rgba(244,237,217,.16);
+  --surface:linear-gradient(180deg,rgba(255,253,248,.96),rgba(251,248,240,.9));
+  --surface-dark:linear-gradient(180deg,rgba(244,237,217,.075),rgba(244,237,217,.028));
+  --elev-1:0 1px 2px rgba(38,37,43,.04),0 10px 26px -16px rgba(38,37,43,.35);
+  --elev-2:0 2px 6px rgba(38,37,43,.05),0 28px 56px -26px rgba(38,37,43,.45);
+  --elev-3:0 34px 70px -34px rgba(103,6,39,.5);
+  --ease:cubic-bezier(.22,.61,.36,1);}
+/* ----------------------------------------------------------
+   1. Gutters: los heroes vuelven a respetar el contenedor
+   ---------------------------------------------------------- */
+.hero-editorial>.container,
+.page-hero>.container,
+.about-hero>.container,
+.contact-hero>.container,
+.faq-hero>.container{width:min(calc(100% - (var(--gutter) * 2)),var(--container));
+  margin-inline:auto;}
+.hero-grid,
+.page-hero-grid,
+.about-hero-grid,
+.contact-grid,
+.faq-hero-grid{padding-inline:0}
+/* ----------------------------------------------------------
+   2. Iconografía Phosphor
+   Los iconos duotone dibujan dos capas con ::before/::after,
+   así que las cápsulas usan inline-block + line-height
+   (nunca flex/grid, que separaría las dos capas).
+   ---------------------------------------------------------- */
+[class*="ph-"]{vertical-align:-.055em}
+.steps-cards article>i,
+.values-grid>article>i,
+.contact-panel-list>article>i,
+.contact-methods a>i:first-child,
+.contact-placeholder>i:first-child,
+.choice>i,
+.mini-process-list i,
+.accordion-item>button>i{display:inline-block;
+  text-align:center;
+  border-radius:16px;
+  background:linear-gradient(150deg,rgba(103,6,39,.11),rgba(242,155,172,.16));
+  box-shadow:inset 0 0 0 1px rgba(103,6,39,.09);
+  color:var(--wine);
+  transition:background .35s ease,color .35s ease,transform .35s var(--ease),box-shadow .35s ease;}
+.choice>i{width:40px;height:40px;line-height:40px;font-size:1.18rem;border-radius:13px;flex:0 0 40px}
+/* ----------------------------------------------------------
+   3. Navbar flotante con indicador deslizante
+   ---------------------------------------------------------- */
+.site-header{padding:16px 0 0}
+.site-header>.container{transition:width .5s var(--ease)}
+.site-header.is-scrolled>.container{width:min(calc(100% - (var(--gutter) * 2)),1140px)}
+.header-inner{position:relative;
+  min-height:76px;
+  grid-template-columns:minmax(140px,1fr) auto auto;
+  gap:14px;
+  padding:9px 9px 9px 22px;
+  border:1px solid rgba(103,6,39,.11);
+  border-radius:999px;
+  background:linear-gradient(180deg,rgba(255,253,248,.94),rgba(251,248,240,.84));
+  backdrop-filter:blur(20px) saturate(160%);
+  -webkit-backdrop-filter:blur(20px) saturate(160%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.85),
+    0 1px 2px rgba(38,37,43,.04),
+    0 20px 48px -26px rgba(38,37,43,.6);
+  transition:min-height .45s var(--ease),padding .45s var(--ease),box-shadow .45s ease,background .45s ease;}
+.site-header.is-scrolled .header-inner{min-height:66px;
+  padding:7px 7px 7px 18px;
+  background:linear-gradient(180deg,rgba(255,253,248,.98),rgba(251,248,240,.94));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.9),
+    0 1px 2px rgba(38,37,43,.05),
+    0 26px 54px -24px rgba(38,37,43,.75);}
+.brand img{width:clamp(140px,11vw,196px);transition:width .45s var(--ease)}
+.site-header.is-scrolled .brand img{width:clamp(126px,9.6vw,172px)}
+.desktop-nav{position:relative;
+  gap:2px;
+  padding:5px;
+  border:1px solid rgba(103,6,39,.08);
+  border-radius:999px;
+  background:rgba(103,6,39,.045);}
+.nav-indicator{position:absolute;
+  left:0;top:5px;
+  width:0;height:calc(100% - 10px);
+  border-radius:999px;
+  background:var(--wine);
+  box-shadow:0 10px 22px -10px rgba(103,6,39,.9),inset 0 1px 0 rgba(255,255,255,.16);
+  opacity:0;
+  pointer-events:none;
+  transition:transform .46s var(--ease),width .46s var(--ease),opacity .3s ease;}
+.desktop-nav.has-indicator .nav-indicator{opacity:1}
+.desktop-nav a{position:relative;
+  z-index:1;
+  padding:11px 17px;
+  border-radius:999px;
+  font-size:.76rem;
+  letter-spacing:.045em;
+  color:var(--ink);
+  transition:color .3s ease;}
+.desktop-nav a::after{display:none}
+.desktop-nav a:hover,
+.desktop-nav a:focus-visible,
+.desktop-nav a[aria-current="page"]{background:transparent;color:var(--ink);transform:none}
+.desktop-nav a.is-lit{color:var(--cream)}
+.desktop-nav a:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+/* Sin JS o sin soporte: el enlace activo se marca igual */
+.desktop-nav:not(.has-indicator) a[aria-current="page"]{background:var(--wine);color:var(--cream)}
+.header-cta{position:relative;
+  overflow:hidden;
+  min-height:52px;
+  padding:13px 20px;
+  gap:9px;
+  border-color:rgba(103,6,39,.16);
+  background:linear-gradient(135deg,rgba(103,6,39,.09),rgba(242,155,172,.24));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5);
+  transition:color .3s ease,border-color .3s ease,transform .3s var(--ease),box-shadow .3s ease;}
+.header-cta::before{content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  border-radius:inherit;
+  background:var(--wine);
+  transform:translateY(101%);
+  transition:transform .42s var(--ease);}
+.header-cta:hover,.header-cta:focus-visible{color:var(--cream);
+  border-color:var(--wine);
+  transform:translateY(-1px);
+  box-shadow:0 14px 28px -14px rgba(103,6,39,.9);}
+.header-cta:hover::before,.header-cta:focus-visible::before{transform:translateY(0)}
+.header-cta i{transition:transform .42s var(--ease)}
+.header-cta:hover i,.header-cta:focus-visible i{transform:translate(3px,-3px)}
+.menu-toggle{width:50px;height:50px;
+  border:1px solid rgba(103,6,39,.14);
+  border-radius:50%;
+  background:rgba(103,6,39,.045);
+  font-size:1.3rem;
+  color:var(--wine);
+  transition:background .3s ease,color .3s ease;}
+.menu-toggle:hover{background:var(--wine);color:var(--cream)}
+.site-header.is-scrolled .menu-toggle{width:46px;height:46px}
+.mobile-panel nav{padding:10px 20px;
+  border:1px solid rgba(103,6,39,.11);
+  border-radius:30px;
+  background:linear-gradient(180deg,rgba(255,253,248,.98),rgba(251,248,240,.96));
+  backdrop-filter:blur(20px);
+  box-shadow:var(--elev-2);}
+.mobile-panel nav a{display:flex;
+  align-items:center;
+  justify-content:space-between;
+  transition:padding-left .3s var(--ease),color .3s ease;}
+.mobile-panel nav a::after{content:"\2197";
+  font-family:var(--sans);
+  font-size:.9rem;
+  opacity:.35;}
+.mobile-panel nav a:hover,.mobile-panel nav a[aria-current="page"]{padding-left:8px;color:var(--wine)}
+/* ----------------------------------------------------------
+   8. Formularios: campos con superficie, no solo subrayado
+   ---------------------------------------------------------- */
+.field input,
+.field textarea,
+.field select{min-height:54px;
+  padding:15px 17px;
+  border:1px solid var(--ring-strong);
+  border-radius:16px;
+  background:rgba(255,255,255,.6);
+  transition:border-color .25s ease,box-shadow .25s ease,background .25s ease;}
+.field textarea{min-height:150px;padding-top:15px}
+.field select{appearance:none;
+  -webkit-appearance:none;
+  padding-right:44px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23670627' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6.5 8 10.5 12 6.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 16px center;
+  background-size:15px;}
+.field input:focus,
+.field textarea:focus,
+.field select:focus{border-color:var(--wine);
+  background:#fff;
+  box-shadow:0 0 0 4px rgba(103,6,39,.09);}
+.field input[type=file]{padding:11px 12px;line-height:30px}
+.field input[type=file]::file-selector-button{margin-right:14px;
+  padding:9px 15px;
+  border:1px solid var(--ring-strong);
+  border-radius:999px;
+  background:transparent;
+  color:var(--wine);
+  font-size:.76rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:background .25s ease,color .25s ease;}
+.field input[type=file]::file-selector-button:hover{background:var(--wine);border-color:var(--wine);color:var(--cream)}
+.choice-grid{gap:13px}
+.choice{position:relative;
+  gap:13px;
+  min-height:74px;
+  padding:15px 48px 15px 15px;
+  border:1px solid var(--ring);
+  border-radius:20px;
+  background:linear-gradient(180deg,rgba(255,255,255,.75),rgba(255,255,255,.35));
+  box-shadow:var(--elev-1);
+  transition:transform .3s var(--ease),border-color .3s ease,box-shadow .3s ease,background .3s ease;}
+.choice input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.choice::after{content:"";
+  position:absolute;
+  right:17px;top:50%;
+  width:20px;height:20px;
+  margin-top:-10px;
+  border:1.5px solid rgba(103,6,39,.3);
+  border-radius:50%;
+  transition:background .25s ease,border-color .25s ease,box-shadow .25s ease;}
+.choice:hover{transform:translateY(-2px);border-color:var(--ring-strong);box-shadow:var(--elev-2)}
+.choice:has(input:checked){border-color:var(--wine);
+  background:linear-gradient(180deg,rgba(242,155,172,.24),rgba(255,255,255,.5));}
+.choice:has(input:checked)::after{background:var(--wine);border-color:var(--wine);box-shadow:inset 0 0 0 3.5px var(--cream)}
+.choice:has(input:checked)>i{background:var(--wine);color:var(--cream)}
+.choice:has(input:focus-visible){outline:2px solid var(--wine);outline-offset:3px}
+.custom-aside{border:1px solid var(--ring);
+  border-radius:34px;
+  background:var(--surface);
+  box-shadow:var(--elev-1);}
+.form-progress>li,.form-progress span{gap:12px}
+.aside-art{border-radius:24px;box-shadow:var(--elev-1)}
+.custom-form{border:1px solid var(--ring);
+  border-radius:34px;
+  background:var(--surface);
+  box-shadow:var(--elev-2);}
+/* ----------------------------------------------------------
+   11. Correcciones de composición
+   ---------------------------------------------------------- */
+.footer-pattern{right:-8%;
+  top:-14%;
+  width:min(520px,38vw);
+  opacity:.07;
+  -webkit-mask-image:linear-gradient(200deg,#000,transparent 72%);
+  mask-image:linear-gradient(200deg,#000,transparent 72%);}
+.footer-grid{z-index:1}
+.footer-column a{position:relative;display:inline-block}
+.footer-bottom a{transition:gap .3s var(--ease)}
+.footer-bottom a:hover{gap:11px}
+.summary-dialog pre{border-radius:20px;background:rgba(255,255,255,.7)}
+.icon-button{transition:background .3s ease,color .3s ease,border-color .3s ease}
+.icon-button:hover{background:var(--wine);border-color:var(--wine);color:var(--cream)}
+/* ----------------------------------------------------------
+   12. Responsive
+   ---------------------------------------------------------- */
+@media (max-width:1180px){
+  .desktop-nav a{padding:10px 13px;font-size:.72rem}
+  .header-cta{padding:12px 15px}
+}
+@media (max-width:980px){
+  .site-header{padding:12px 0 0}
+  .site-header.is-scrolled>.container{width:min(calc(100% - (var(--gutter) * 2)),var(--container))}
+  .header-inner{grid-template-columns:minmax(0,1fr) auto;padding:8px 8px 8px 18px;min-height:70px;border-radius:999px}
+  .site-header.is-scrolled .header-inner{min-height:64px}
+}
+@media (max-width:760px){
+  .header-inner{padding:7px 7px 7px 15px;min-height:64px}
+  .brand img{width:145px}
+  .menu-toggle{width:46px;height:46px}
+  .choice{min-height:66px;padding:13px 44px 13px 13px}
+  .choice>i{width:36px;height:36px;line-height:36px;font-size:1.05rem;flex:0 0 36px}
+  .footer-pattern{width:70vw;opacity:.05}
+}
+@media (prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  .nav-indicator{transition:none}
+}
+/* La ficha de las páginas interiores: el parche de patrón se
+   integra en la esquina en vez de recortarse en seco. */
+.page-hero-collection .page-hero-image::before,.page-hero-personalize .page-hero-image::before{width:30%;height:30%;
+  border-radius:26px 0 var(--radius-lg) 0;
+  opacity:.86;}
+/* Móvil: el bloque rosa vacío se reemplaza por el tejido de marca
+   (un rectángulo pálido sin contenido se leía como un hueco). */
+@media (max-width:540px){
+  .announcement{justify-content:center;
+      overflow:hidden;
+      gap:9px;
+      padding-inline:12px;
+      font-size:.54rem;
+      letter-spacing:.05em;}
+}
+/* La barra de anuncio vuelve a mostrar los dos mensajes:
+   con el cuerpo reducido caben ambos por encima de 380px. */
+@media (max-width:540px){
+  .announcement span:last-child{display:block}
+  .announcement i{display:block}
+}
+@media (max-width:379px){
+  .announcement span:last-child,.announcement i{display:none}
+}
+/* ----------------------------------------------------------
+   15. Contraste sobre los fondos rosa
+   ---------------------------------------------------------- */
+.page-hero-personalize .page-hero-copy>p:last-child,
+.page-hero-personalize .page-hero-copy .lede,
+.contact-copy>p,
+.studio-copy>.lede,
+.process-list p,
+.about-quote .quote-grid>p{color:rgba(38,37,43,.82)}
+/* ----------------------------------------------------------
+   17. Etiquetas de formulario
+   El <label> ES el .field (envuelve al control), así que las
+   reglas .field label / .field > span nunca se aplicaban.
+   ---------------------------------------------------------- */
+.field{font-size:.78rem;font-weight:600;color:var(--charcoal)}
+.field input,
+.field textarea,
+.field select{font-size:.95rem;font-weight:400;color:var(--charcoal)}
+.field small{font-weight:400}
+
+/* Phosphor Icons (MIT) - subconjunto local usado por esta página. */
+@font-face{font-family:"Phosphor-Bold";src:url("assets/fonts/phosphor-bold.woff2") format("woff2");font-weight:normal;font-style:normal;font-display:block}
+@font-face{font-family:"Phosphor-Duotone";src:url("assets/fonts/phosphor-duotone.woff2") format("woff2");font-weight:normal;font-style:normal;font-display:block}
+[class*="ph-"]{display:inline-block;line-height:1;font-style:normal;font-variant:normal;font-weight:normal;text-transform:none;speak:never;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.ph-bold{font-family:"Phosphor-Bold"!important}
+.ph-duotone{font-family:"Phosphor-Duotone"!important;position:relative}
+.ph-bold.ph-arrow-left:before{content:"\e058"}
+.ph-duotone.ph-arrow-left:before{content:"\e058";opacity:.24}
+.ph-duotone.ph-arrow-left:after{content:"\e059";margin-left:-1em}
+.ph-bold.ph-arrow-right:before{content:"\e06c"}
+.ph-duotone.ph-arrow-right:before{content:"\e06c";opacity:.24}
+.ph-duotone.ph-arrow-right:after{content:"\e06d";margin-left:-1em}
+.ph-bold.ph-arrow-up:before{content:"\e08e"}
+.ph-duotone.ph-arrow-up:before{content:"\e08e";opacity:.24}
+.ph-duotone.ph-arrow-up:after{content:"\e08f";margin-left:-1em}
+.ph-bold.ph-arrow-up-right:before{content:"\e092"}
+.ph-duotone.ph-arrow-up-right:before{content:"\e092";opacity:.24}
+.ph-duotone.ph-arrow-up-right:after{content:"\e093";margin-left:-1em}
+.ph-bold.ph-coat-hanger:before{content:"\e7fe"}
+.ph-duotone.ph-coat-hanger:before{content:"\e7fe";opacity:.24}
+.ph-duotone.ph-coat-hanger:after{content:"\e7ff";margin-left:-1em}
+.ph-bold.ph-copy:before{content:"\e1ca"}
+.ph-duotone.ph-copy:before{content:"\e1ca";opacity:.24}
+.ph-duotone.ph-copy:after{content:"\e1cb";margin-left:-1em}
+.ph-bold.ph-download-simple:before{content:"\e20c"}
+.ph-duotone.ph-download-simple:before{content:"\e20c";opacity:.24}
+.ph-duotone.ph-download-simple:after{content:"\e20d";margin-left:-1em}
+.ph-bold.ph-list:before{content:"\e2f0"}
+.ph-duotone.ph-list:before{content:"\e2f0";opacity:.24}
+.ph-duotone.ph-list:after{content:"\e2f1";margin-left:-1em}
+.ph-bold.ph-scissors:before{content:"\eae0"}
+.ph-duotone.ph-scissors:before{content:"\eae0";opacity:.24}
+.ph-duotone.ph-scissors:after{content:"\eae1";margin-left:-1em}
+.ph-bold.ph-sparkle:before{content:"\e6a2"}
+.ph-duotone.ph-sparkle:before{content:"\e6a2";opacity:.24}
+.ph-duotone.ph-sparkle:after{content:"\e6a3";margin-left:-1em}
+.ph-bold.ph-t-shirt:before{content:"\e670"}
+.ph-duotone.ph-t-shirt:before{content:"\e670";opacity:.24}
+.ph-duotone.ph-t-shirt:after{content:"\e671";margin-left:-1em}
+.ph-bold.ph-x:before{content:"\e4f6"}
+.ph-duotone.ph-x:before{content:"\e4f6";opacity:.24}
+.ph-duotone.ph-x:after{content:"\e4f7";margin-left:-1em}
+
+/* ==========================================================
+   V8 · Capa de refinamiento visual y responsive
+   (va al final del <style> de cada página: gana a lo anterior)
+   ========================================================== */
+h1,h2,h3,blockquote{text-wrap:balance}
+p,li,figcaption{text-wrap:pretty}
+::selection{background:var(--wine);color:var(--cream)}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+
+/* Títulos de portada: medida editorial (3 líneas, no 5) */
+.hero-copy h1,
+.page-hero-copy h1,.contact-copy h1,.about-title h1,.faq-hero h1{max-width:12.5ch!important;font-size:clamp(3rem,5.25vw,5.7rem)!important;line-height:.95!important;letter-spacing:-.03em}
+.page-hero-copy h1{max-width:13ch!important}
+.about-title h1,.faq-hero h1,.page-hero-personalize .page-hero-copy h1{max-width:16ch!important}
+.page-hero-copy>p:last-child,.page-hero-copy .lede{max-width:46ch}
+@media (min-width:981px){.page-hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr)}}
+.page-hero-image{box-shadow:0 34px 80px -34px rgba(38,37,43,.45)}
+.page-hero-image img{transition:transform 1.2s var(--ease,ease)}
+.page-hero-image:hover img{transform:scale(1.025)}
+
+/* Navegación con seis secciones */
+.desktop-nav a{padding:11px 15px}
+.desktop-nav a[href="tienda.html"]::before,
+.desktop-nav a[href="libros.html"]::before{content:none}
+@media (max-width:1320px){
+  .desktop-nav a{padding:10px 12px;font-size:.72rem;letter-spacing:.035em}
+  .header-cta{padding:11px 14px;font-size:.72rem}
+}
+.mobile-panel{max-height:calc(100svh - 110px);overflow-y:auto;overscroll-behavior:contain}
+@media (min-width:761px) and (max-width:980px){
+  .mobile-panel-inner{grid-template-columns:1.2fr .8fr;gap:18px;align-items:start}
+}
+
+/* Tarjetas: elevación más suave y consistente */
+.collection-image img,.story-card img{will-change:transform}
+.collection-card{transition:transform .5s var(--ease,ease),box-shadow .5s var(--ease,ease)}
+@media (hover:hover){
+  .collection-card:hover{transform:translateY(-4px)}
+}
+
+/* Footer: columna de enlaces con 6 entradas en dos columnas */
+.footer-column h2{margin-bottom:14px}
+.footer-column a{white-space:nowrap}
+@media (min-width:761px){
+  .footer-column:nth-of-type(2){display:grid;grid-auto-flow:column;grid-template-rows:auto repeat(3,auto);grid-template-columns:repeat(2,max-content);column-gap:44px;align-content:start}
+  .footer-column:nth-of-type(2) h2{grid-row:1;grid-column:1/-1}
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width:980px){
+  .page-hero-copy h1,.hero-copy h1,.contact-copy h1,.about-title h1,.faq-hero h1{max-width:14ch!important}
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width:760px){
+  .hero-copy h1,
+  .page-hero-copy h1,.contact-copy h1,.about-title h1,.faq-hero h1{font-size:clamp(2.7rem,11.4vw,3.7rem)!important;max-width:none!important}
+  .section-heading h2,.detail-intro h2,.collection-cta h2{font-size:clamp(2.3rem,9.6vw,3.2rem)}
+  /* Sellos del hero: una sola fila deslizable en lugar de una píldora huérfana */
+  .hero-meta{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent);padding-right:24px}
+  .hero-meta::-webkit-scrollbar{display:none}
+  .hero-meta span{flex:0 0 auto}
+  /* «Más historias»: el texto ya no se monta sobre el tejido */
+  .story-card-color{min-height:340px!important}
+  .story-card-color .story-pattern{width:30%!important;-webkit-mask-image:linear-gradient(90deg,transparent,#000 35%);mask-image:linear-gradient(90deg,transparent,#000 35%)}
+  .story-card-color>div{max-width:64%!important}
+  .story-card-color h3{font-size:clamp(2rem,8.6vw,2.6rem)!important}
+  .footer-column a{padding-block:3px}
+}
+/* Home: títulos de portada un punto más grandes, hay aire de sobra */
+@media (min-width:981px){
+  .hero-copy h1{font-size:clamp(3.4rem,6.1vw,6.8rem)!important}
+}
+@media (max-width:420px){
+  .button{min-height:50px;padding:12px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  .page-hero-image:hover img,.collection-card:hover{transform:none}
+}
+</style>
+</head>
+<body><a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div class="announcement"><span>Piezas pintadas a mano</span><i aria-hidden="true"></i><span>Personalización por encargo</span></div>
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Carmen Vélart, inicio"><img src="assets/brand/logo-horizontal.png" alt="Carmen Vélart" width="1313" height="200"></a>
+    <nav class="desktop-nav" aria-label="Navegación principal"><a href="coleccion.html">Colección</a><a href="tienda.html">Tienda</a><a href="libros.html">Libros</a><a href="personaliza.html" aria-current="page">Personaliza</a><a href="nosotros.html">El estudio</a><a href="contacto.html">Contacto</a></nav>
+    <a class="header-cta" href="personaliza.html">Crear una pieza <i class="ph-bold ph-arrow-up-right" aria-hidden="true"></i></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-panel" aria-label="Abrir menú"><i class="ph-bold ph-list" aria-hidden="true"></i></button>
+  </div>
+  <div class="mobile-panel" id="mobile-panel" hidden>
+    <div class="mobile-panel-inner container">
+      <nav aria-label="Navegación móvil"><a href="coleccion.html">Colección</a><a href="tienda.html">Tienda</a><a href="libros.html">Libros</a><a href="personaliza.html" aria-current="page">Personaliza</a><a href="nosotros.html">El estudio</a><a href="contacto.html">Contacto</a><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></nav>
+      <div class="mobile-note"><span class="eyebrow">Carmen Vélart</span><p>Una historia puede<br><em>convertirse en prenda.</em></p></div>
+    </div>
+  </div>
+</header><main id="contenido">
+<section class="page-hero page-hero-personalize"><div class="container page-hero-grid"><div class="page-hero-copy reveal"><p class="eyebrow">Personaliza</p><h1>Lo difícil no es tener una idea. <em>Es encontrar dónde llevarla.</em></h1><p>Cuéntanos qué quieres representar. Este formulario organiza la información para que la conversación empiece con contexto.</p></div><figure class="page-hero-image reveal" data-delay="90"><img src="assets/img/mariposa-process.webp" alt="Proceso de pintura de una mariposa sobre una chaqueta"><figcaption>Del concepto al detalle</figcaption></figure></div></section>
+<section class="section custom-form-section"><div class="container custom-layout">
+  <aside class="custom-aside reveal"><span class="eyebrow">Tu encargo</span><h2>Tres pasos.<br><em>Una idea clara.</em></h2><ol class="form-progress" aria-label="Progreso"><li class="is-active" data-progress="1"><span>01</span><div>La historia<small>Qué quieres contar</small></div></li><li data-progress="2"><span>02</span><div>La prenda<small>Base y estilo</small></div></li><li data-progress="3"><span>03</span><div>Contacto<small>Cómo seguimos</small></div></li></ol><div class="aside-art"><img src="assets/img/perrito-detail.webp" alt="Detalle de pintura y flores sobre denim" loading="lazy"></div></aside>
+  <form class="custom-form reveal" data-delay="80" id="custom-form">
+    <section class="form-step is-active" data-step="1"><span class="step-label">Paso 01 / 03</span><h2>¿Qué quieres convertir en arte?</h2><p>Empieza por lo importante: la historia. No necesitas explicarla perfecto.</p><div class="field-grid"><label class="field field-full">Cuéntanos tu idea<textarea name="idea" rows="5" required placeholder="Ej.: quiero llevar un retrato de mi perrito con flores que recuerden a mi abuela..."></textarea></label><label class="field">Tipo de inspiración<select name="tipo"><option value="">Selecciona</option><option>Retrato</option><option>Naturaleza</option><option>Frase o símbolo</option><option>Escena ilustrada</option><option>Otra idea</option></select></label><label class="field">Colores que imaginas<input type="text" name="colores" placeholder="Ej.: vino, rosa, verde oliva"></label><label class="field field-full">Referencias visuales<input type="file" name="referencias" accept="image/*" multiple><small>Las referencias quedarán identificadas por nombre en el resumen; podrás compartir los archivos al continuar la conversación.</small></label></div><div class="form-nav"><span></span><button class="button" type="button" data-next-step>Siguiente <i class="ph-bold ph-arrow-right"></i></button></div></section>
+    <section class="form-step" data-step="2"><span class="step-label">Paso 02 / 03</span><h2>¿Sobre qué prenda lo imaginas?</h2><p>Esto nos ayuda a pensar proporción, ubicación y composición.</p><div class="choice-grid" role="group" aria-label="Tipo de prenda"><label class="choice"><input type="radio" name="prenda" value="Chaqueta de denim"><i class="ph-duotone ph-coat-hanger"></i><span>Chaqueta de denim</span></label><label class="choice"><input type="radio" name="prenda" value="Camisa o sobrecamisa"><i class="ph-duotone ph-t-shirt"></i><span>Camisa / sobrecamisa</span></label><label class="choice"><input type="radio" name="prenda" value="Otra prenda"><i class="ph-duotone ph-scissors"></i><span>Otra prenda</span></label></div><div class="field-grid"><label class="field">Talla o referencia de talla<input type="text" name="talla" placeholder="Ej.: M / oversize"></label><label class="field">Color base de la prenda<input type="text" name="base" placeholder="Ej.: denim azul claro"></label><label class="field field-full">¿Dónde te gustaría el diseño?<input type="text" name="ubicacion" placeholder="Ej.: espalda completa, bolsillo, manga, frente..."></label></div><div class="form-nav"><button class="button button-outline" type="button" data-prev-step><i class="ph-bold ph-arrow-left"></i> Atrás</button><button class="button" type="button" data-next-step>Siguiente <i class="ph-bold ph-arrow-right"></i></button></div></section>
+    <section class="form-step" data-step="3"><span class="step-label">Paso 03 / 03</span><h2>¿Cómo continuamos la conversación?</h2><p>Completa tus datos y generaremos un resumen listo para compartir.</p><div class="field-grid"><label class="field">Nombre<input type="text" name="nombre" autocomplete="name" required></label><label class="field">Correo<input type="email" name="correo" autocomplete="email"></label><label class="field">WhatsApp<input type="tel" name="telefono" autocomplete="tel" placeholder="Con código de país"></label><label class="field">Forma preferida de contacto<select name="canal"><option>WhatsApp</option><option>Correo</option></select></label><label class="field field-full">Algo más que debamos saber<textarea name="extra" rows="4"></textarea></label></div><label class="check-line"><input type="checkbox" required><span>Entiendo que este formulario prepara una solicitud y no confirma precio, disponibilidad ni pedido.</span></label><div class="form-nav"><button class="button button-outline" type="button" data-prev-step><i class="ph-bold ph-arrow-left"></i> Atrás</button><button class="button" type="submit">Preparar solicitud <i class="ph-duotone ph-sparkle"></i></button></div></section>
+  </form>
+</div></section>
+<section class="section bg-pink"><div class="container mini-process"><div class="reveal"><p class="eyebrow">Después del formulario</p><h2>La idea no se automatiza.<br><em>Se conversa.</em></h2></div><div class="mini-process-list reveal" data-delay="80"><div><span>01</span><p>Revisión de tu historia y referencias.</p></div><div><span>02</span><p>Definición de alcance y composición.</p></div><div><span>03</span><p>Confirmación antes de iniciar la pieza.</p></div></div></div></section>
+</main><footer class="site-footer">
+  <div class="footer-pattern" aria-hidden="true"></div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/brand/logo-stacked.png" alt="Carmen Vélart" width="676" height="382" loading="lazy">
+      <p>Arte pintado a mano para llevar recuerdos, símbolos e historias contigo.</p>
+    </div>
+    <div class="footer-column"><h2>Explora</h2><a href="coleccion.html">Colección</a><a href="tienda.html">Tienda</a><a href="libros.html">Libros</a><a href="personaliza.html">Personaliza</a><a href="nosotros.html">El estudio</a><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></div>
+    <div class="footer-column"><h2>Hablemos</h2><a href="contacto.html">Contacto</a><a href="#" data-footer-whatsapp hidden>WhatsApp</a><a href="#" data-footer-email hidden>Correo</a><a href="#" data-footer-instagram hidden>Instagram</a></div>
+  </div>
+  <div class="container footer-bottom"><p>© <span data-year></span> Carmen Vélart</p><p>Pinturas personalizadas</p><a href="#contenido">Volver arriba <i class="ph-bold ph-arrow-up" aria-hidden="true"></i></a></div>
+</footer>
+<dialog class="summary-dialog" id="summary-dialog" aria-labelledby="summary-title">
+  <div class="dialog-head"><span class="eyebrow">Tu solicitud</span><button type="button" class="icon-button" data-close-dialog aria-label="Cerrar"><i class="ph-bold ph-x"></i></button></div>
+  <h2 id="summary-title">Tu idea,<br><em>ordenada para compartir.</em></h2>
+  <p class="dialog-copy">Revisa el resumen de tu solicitud. Puedes copiarlo, descargarlo o continuar por uno de los canales de contacto disponibles.</p>
+  <pre id="summary-text"></pre>
+  <div class="dialog-actions"><button class="button" id="copy-summary" type="button">Copiar <i class="ph-bold ph-copy"></i></button><button class="button button-outline" id="download-summary" type="button">Descargar .txt <i class="ph-bold ph-download-simple"></i></button><a class="button" id="send-summary" hidden>Continuar <i class="ph-bold ph-arrow-up-right"></i></a></div>
+  <p class="form-status" id="copy-status" role="status"></p>
+</dialog>
+<script>
+(function(){
+  "use strict";
+  /* ============================================================
+     CANALES DE CONTACTO
+     Completa solo los canales reales que quieras publicar.
+     Si un campo queda vacío, el enlace no se muestra.
+     - whatsapp: solo dígitos con código de país (Perú: 51999999999)
+     - email:    correo completo
+     - instagram: URL completa del perfil
+     Este bloque se repite igual en las 8 páginas: al cambiarlo,
+     cámbialo en todas (búsqueda y reemplazo).
+     ============================================================ */
+  const CONFIG = {
+    whatsapp: "",
+    email: "",
+    instagram: ""
+  };
+
+  const $ = (selector, context = document) => context.querySelector(selector);
+  const $$ = (selector, context = document) => Array.from(context.querySelectorAll(selector));
+
+  // Año del footer y estado de la cabecera al hacer scroll.
+  $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
+  const header = $('[data-header]');
+  const syncHeader = () => header && header.classList.toggle('is-scrolled', window.scrollY > 8);
+  syncHeader();
+  window.addEventListener('scroll', syncHeader, {passive:true});
+
+  // Navbar: indicador deslizante bajo el enlace activo / con hover.
+  const desktopNav = $('.desktop-nav');
+  if (desktopNav) {
+    const navLinks = $$('a', desktopNav);
+    const indicator = document.createElement('span');
+    indicator.className = 'nav-indicator';
+    indicator.setAttribute('aria-hidden', 'true');
+    desktopNav.prepend(indicator);
+
+    const currentLink = desktopNav.querySelector('a[aria-current="page"]');
+    let hovered = null;
+    let placed = false;
+
+    const moveTo = (link, instant) => {
+      if (!link) {
+        desktopNav.classList.remove('has-indicator');
+        navLinks.forEach(l => l.classList.remove('is-lit'));
+        return;
+      }
+      const navBox = desktopNav.getBoundingClientRect();
+      const linkBox = link.getBoundingClientRect();
+      if (!linkBox.width) return;
+      if (instant) indicator.style.transition = 'opacity .3s ease';
+      indicator.style.width = `${linkBox.width}px`;
+      indicator.style.transform = `translateX(${linkBox.left - navBox.left}px)`;
+      desktopNav.classList.add('has-indicator');
+      navLinks.forEach(l => l.classList.toggle('is-lit', l === link));
+      if (instant) requestAnimationFrame(() => { indicator.style.transition = ''; });
+    };
+
+    // Se reposiciona sobre el enlace apuntado; si no hay ninguno,
+    // vuelve al de la página actual.
+    const settle = () => { moveTo(hovered || currentLink, !placed); placed = true; };
+
+    navLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => { hovered = link; settle(); });
+      link.addEventListener('focus', () => { hovered = link; settle(); });
+    });
+    desktopNav.addEventListener('mouseleave', () => { hovered = null; settle(); });
+    desktopNav.addEventListener('focusout', () => {
+      window.setTimeout(() => {
+        if (!desktopNav.contains(document.activeElement)) { hovered = null; settle(); }
+      }, 0);
+    });
+    window.addEventListener('resize', settle);
+    if (header) header.addEventListener('transitionend', settle);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(settle).catch(() => {});
+    requestAnimationFrame(settle);
+  }
+
+  // Menú responsive.
+  const menuToggle = $('.menu-toggle');
+  const mobilePanel = $('#mobile-panel');
+  if (menuToggle && mobilePanel) {
+    const closeMenu = () => {
+      mobilePanel.hidden = true;
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menú');
+      menuToggle.innerHTML = '<i class="ph-bold ph-list" aria-hidden="true"></i>';
+      document.body.classList.remove('menu-open');
+    };
+    menuToggle.addEventListener('click', () => {
+      const opening = mobilePanel.hidden;
+      mobilePanel.hidden = !opening;
+      menuToggle.setAttribute('aria-expanded', String(opening));
+      menuToggle.setAttribute('aria-label', opening ? 'Cerrar menú' : 'Abrir menú');
+      menuToggle.innerHTML = opening ? '<i class="ph-bold ph-x" aria-hidden="true"></i>' : '<i class="ph-bold ph-list" aria-hidden="true"></i>';
+      document.body.classList.toggle('menu-open', opening);
+    });
+    $$('#mobile-panel a').forEach(link => link.addEventListener('click', closeMenu));
+    window.addEventListener('resize', () => { if (window.innerWidth > 980) closeMenu(); });
+  }
+
+  // Entradas progresivas; sin JS o sin IntersectionObserver el contenido se ve igual.
+  $$('.reveal').forEach(el => {
+    el.style.setProperty('--delay', `${Number(el.dataset.delay || 0)}ms`);
+  });
+  const reveals = $$('.reveal');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -5%'});
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Canales configurables. Si están vacíos, no se inventa información de contacto.
+  const normalizedWhatsapp = String(CONFIG.whatsapp || '').replace(/\D/g, '');
+  const contactEmail = String(CONFIG.email || '').trim();
+  const instagram = String(CONFIG.instagram || '').trim();
+  const channelMap = {
+    whatsapp: normalizedWhatsapp ? `https://wa.me/${normalizedWhatsapp}` : '',
+    email: contactEmail ? `mailto:${contactEmail}` : '',
+    instagram
+  };
+  const bindChannel = (selector, key) => {
+    $$(selector).forEach(link => {
+      const href = channelMap[key];
+      if (!href) return;
+      link.href = href;
+      link.hidden = false;
+      if (key === 'instagram') { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
+    });
+  };
+  bindChannel('[data-footer-whatsapp], [data-contact-whatsapp]', 'whatsapp');
+  bindChannel('[data-footer-email], [data-contact-email]', 'email');
+  bindChannel('[data-footer-instagram], [data-contact-instagram]', 'instagram');
+
+  /* ------------------------------------------------------------
+     Resumen de la solicitud
+     No hay backend: el formulario arma un texto que se puede
+     copiar, descargar o abrir en el canal de contacto configurado.
+     ------------------------------------------------------------ */
+  const dialog = $('#summary-dialog');
+  const summaryText = $('#summary-text');
+  const copyStatus = $('#copy-status');
+  const sendSummary = $('#send-summary');
+  let currentSummary = '';
+
+  const chooseOutboundChannel = (preferred, summary) => {
+    const wa = () => ({href:`https://wa.me/${normalizedWhatsapp}?text=${encodeURIComponent(summary)}`, label:'Abrir WhatsApp'});
+    const mail = () => ({href:`mailto:${contactEmail}?subject=${encodeURIComponent('Solicitud Carmen Vélart')}&body=${encodeURIComponent(summary)}`, label:'Abrir correo'});
+    if (preferred === 'whatsapp' && normalizedWhatsapp) return wa();
+    if ((preferred === 'email' || preferred === 'correo') && contactEmail) return mail();
+    if (normalizedWhatsapp) return wa();
+    if (contactEmail) return mail();
+    return null;
+  };
+
+  const openSummary = (summary, preferred = '') => {
+    if (!dialog || !summaryText) return;
+    currentSummary = summary;
+    summaryText.textContent = summary;
+    if (copyStatus) copyStatus.textContent = '';
+    const outbound = chooseOutboundChannel(preferred, summary);
+    if (sendSummary) {
+      if (outbound) {
+        sendSummary.hidden = false;
+        sendSummary.href = outbound.href;
+        sendSummary.textContent = outbound.label;
+        const icon = document.createElement('i');
+        icon.className = 'ph-bold ph-arrow-up-right';
+        sendSummary.appendChild(icon);
+      } else {
+        sendSummary.hidden = true;
+      }
+    }
+    if (typeof dialog.showModal === 'function') dialog.showModal();
+    else dialog.setAttribute('open','');
+  };
+
+  $$('[data-close-dialog]').forEach(button => button.addEventListener('click', () => {
+    if (!dialog) return;
+    if (typeof dialog.close === 'function') dialog.close();
+    else dialog.removeAttribute('open');
+  }));
+  if (dialog) dialog.addEventListener('click', event => {
+    const rect = dialog.getBoundingClientRect();
+    const outside = event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom;
+    if (outside && typeof dialog.close === 'function') dialog.close();
+  });
+
+  const copyButton = $('#copy-summary');
+  if (copyButton) copyButton.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(currentSummary);
+      if (copyStatus) copyStatus.textContent = 'Resumen copiado.';
+    } catch (_) {
+      const area = document.createElement('textarea');
+      area.value = currentSummary;
+      document.body.appendChild(area);
+      area.select();
+      document.execCommand('copy');
+      area.remove();
+      if (copyStatus) copyStatus.textContent = 'Resumen copiado.';
+    }
+  });
+
+  const downloadButton = $('#download-summary');
+  if (downloadButton) downloadButton.addEventListener('click', () => {
+    const blob = new Blob([currentSummary], {type:'text/plain;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = 'solicitud-carmen-velart.txt';
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+  });
+
+  const labelFor = (form, name) => {
+    const field = form.elements.namedItem(name);
+    if (!field) return name;
+    if (field instanceof RadioNodeList) {
+      const checked = $(`input[name="${CSS.escape(name)}"]:checked`, form);
+      if (checked) {
+        const choiceLabel = checked.closest('label');
+        return choiceLabel ? choiceLabel.textContent.trim().replace(/\s+/g,' ') : checked.value;
+      }
+    }
+    const wrappingLabel = field.closest ? field.closest('label') : null;
+    if (wrappingLabel) {
+      const clone = wrappingLabel.cloneNode(true);
+      clone.querySelectorAll('input,textarea,select,small').forEach(node => node.remove());
+      const clean = clone.textContent.trim().replace(/\s+/g,' ');
+      if (clean) return clean;
+    }
+    const fieldLabel = field.id ? $(`label[for="${CSS.escape(field.id)}"]`, form) : null;
+    return fieldLabel ? fieldLabel.textContent.trim() : name;
+  };
+
+  const fieldValue = (form, name) => {
+    const field = form.elements.namedItem(name);
+    if (!field) return '';
+    if (field instanceof RadioNodeList) return field.value || '';
+    if (field.type === 'file') return field.files && field.files.length ? Array.from(field.files).map(f => f.name).join(', ') : '';
+    if (field.type === 'checkbox') return field.checked ? 'Sí' : 'No';
+    if (field.tagName === 'SELECT') return field.options[field.selectedIndex]?.text || field.value;
+    return String(field.value || '').trim();
+  };
+
+  // Títulos de las piezas, solo para reflejar la inspiración elegida
+  // cuando se llega desde una ficha (personaliza.html?inspiracion=...).
+  const PIEZAS = {
+    "colibri": "Colibrí",
+    "retrato-floral": "Retrato floral",
+    "alpaca-andina": "Alpaca andina",
+    "mariposa": "Mariposa",
+    "fauno": "Fauno",
+    "alpaca-solar": "Alpaca solar"
+  };
+
+  const validateStep = (step) => {
+    const requiredFields = $$('input[required], textarea[required], select[required]', step);
+    for (const field of requiredFields) {
+      if (field.type === 'radio') {
+        const checked = $(`input[name="${CSS.escape(field.name)}"]:checked`, step);
+        if (!checked) { field.reportValidity(); return false; }
+      } else if (!field.checkValidity()) {
+        field.reportValidity();
+        return false;
+      }
+    }
+    return true;
+  };
+
+  // Formulario por pasos.
+  const customForm = $('#custom-form');
+  if (customForm) {
+    const steps = $$('.form-step', customForm);
+    const progress = $$('.form-progress > li');
+    let currentStep = 0;
+    const inspiration = new URLSearchParams(location.search).get('inspiracion') || '';
+    const inspirationTitle = PIEZAS[inspiration] || '';
+
+    const showStep = index => {
+      currentStep = Math.max(0, Math.min(index, steps.length - 1));
+      steps.forEach((step, i) => step.classList.toggle('is-active', i === currentStep));
+      progress.forEach((item, i) => item.classList.toggle('is-active', i === currentStep));
+      customForm.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'});
+    };
+
+    $$('[data-next-step]', customForm).forEach(button => button.addEventListener('click', () => {
+      if (!validateStep(steps[currentStep])) return;
+      showStep(currentStep + 1);
+    }));
+    $$('[data-prev-step]', customForm).forEach(button => button.addEventListener('click', () => showStep(currentStep - 1)));
+
+    customForm.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!validateStep(steps[currentStep])) return;
+      const names = ['idea','tipo','colores','referencias','prenda','talla','base','ubicacion','nombre','correo','telefono','canal','extra'];
+      const labels = {
+        idea:'Idea', tipo:'Tipo de inspiración', colores:'Colores', referencias:'Referencias visuales',
+        prenda:'Prenda', talla:'Talla', base:'Color base', ubicacion:'Ubicación del diseño',
+        nombre:'Nombre', correo:'Correo', telefono:'WhatsApp', canal:'Canal preferido', extra:'Información adicional'
+      };
+      const lines = ['CARMEN VÉLART · SOLICITUD DE PERSONALIZACIÓN'];
+      if (inspirationTitle) lines.push(`Inspiración visual: ${inspirationTitle}`);
+      lines.push('');
+      names.forEach(name => {
+        const value = fieldValue(customForm, name);
+        if (value) lines.push(`${labels[name] || labelFor(customForm, name)}: ${value}`);
+      });
+      lines.push('', 'Nota: este resumen organiza la solicitud inicial. El alcance final se confirma directamente con Carmen Vélart.');
+      openSummary(lines.join('\n'), fieldValue(customForm,'canal').toLowerCase());
+    });
+  }
+
+})();
+</script></body></html>
